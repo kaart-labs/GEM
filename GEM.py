@@ -1,14 +1,7 @@
 import os
 import sys
 import sys, random
-
 import string
-
-from time import gmtime, strftime
-from datetime import time
-from datetime import datetime
-from datetime import date
-from time import sleep
 from PySide2.QtWidgets import QApplication
 from PySide2 import QtCore, QtGui, QtWidgets
 import PyQt5
@@ -23,7 +16,7 @@ from PyQt5.QtCore import QSize
 ################################################
 __author__ = "Chris Gousset"
 __copyright__ = "N/A"
-__credits__ = ["Louis","Zack"]
+__credits__ = ["Louis Morales","Zack LaVergne"]
 __license__ = "N/A"
 __version__ = "2.0"
 __maintainer__ = "Chris Gousset"
