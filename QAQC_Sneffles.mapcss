@@ -158,11 +158,6 @@ setting::user_Goose {
             label:tr("Turn User VLD154 On/Off");
             default:true;
             }
-setting::user_HOT5 {
-            type:boolean;
-            label:tr("Turn User Qomar IRM-ED On/Off");
-            default:true;
-            }
 setting::user_Kayla {
             type:boolean;
             label:tr("Turn User VLD096 On/Off");
@@ -235,9 +230,6 @@ node:modified < way::modified_layer {
 }
 *[eval(JOSM_search("user:VLD154"))][setting("user_Goose")] {
   set .Goose
-}
-*[eval(JOSM_search("user:\"Qomar IRM-ED\""))][setting("user_HOT5")] {
-  set .HOT5;
 }
 *[eval(JOSM_search("user:VLD096"))][setting("user_Kayla")] {
   set .Kayla
@@ -364,15 +356,6 @@ way.Kady{
   text: eval(concat("Highway type =", " ", tag("highway")));
   text-offset: -20;
   */
-}way.HOT5{
-  z-index: -10;
-  casing-color: #00fff7;
-  casing-width: 5;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
 }way.Kayla{
   z-index: -10;
   casing-color: #b400ff;
@@ -466,13 +449,6 @@ node.Kady{
   symbol-size: 10;
   symbol-shape: Triangle;
   symbol-stroke-color: #0d00ff;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.HOT5{
-  symbol-size: 10;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #00ffc0;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
