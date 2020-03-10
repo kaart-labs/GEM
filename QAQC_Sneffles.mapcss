@@ -1,5 +1,5 @@
 meta {
-  title: "QC Style For sneffles Team";
+  title: "QC Style For Sneffles Team";
   description: "Highlights features that were created/modified by users";
   watch-modified: true;
   version: "1.5";
@@ -98,11 +98,6 @@ that there is another selector we would like to call out after "aaron"
 
 /* User Settings */
 
-setting::user_Maureen {
-            type:boolean;
-            label:tr("Turn User VLD026 On/Off");
-            default:true;
-            }
 setting::user_Kady {
             type:boolean;
             label:tr("Turn User VLD035 On/Off");
@@ -121,11 +116,6 @@ setting::user_Gwen {
 setting::user_Steve {
             type:boolean;
             label:tr("Turn User VLD089 On/Off");
-            default:true;
-            }
-setting::user_Tukui {
-            type:boolean;
-            label:tr("Turn User VLD090 On/Off");
             default:true;
             }
 setting::user_Drew {
@@ -168,34 +158,14 @@ setting::user_Goose {
             label:tr("Turn User VLD154 On/Off");
             default:true;
             }
-setting::user_Joanna {
-            type:boolean;
-            label:tr("Turn User VLD150 On/Off");
-            default:true;
-            }
-setting::user_HOT1 {
-            type:boolean;
-            label:tr("Turn User Zainab IRM-ED On/Off");
-            default:true;
-            }
-setting::user_HOT2 {
-            type:boolean;
-            label:tr("Turn User Diah IRM-ED On/Off");
-            default:true;
-            }
-setting::user_HOT3 {
-            type:boolean;
-            label:tr("Turn User Diana IRM-ED On/Off");
-            default:true;
-            }
-setting::user_HOT4 {
-            type:boolean;
-            label:tr("Turn User Anisa IRM-ED On/Off");
-            default:true;
-            }
 setting::user_HOT5 {
             type:boolean;
             label:tr("Turn User Qomar IRM-ED On/Off");
+            default:true;
+            }
+setting::user_Kayla {
+            type:boolean;
+            label:tr("Turn User VLD096 On/Off");
             default:true;
             }
 
@@ -206,9 +176,9 @@ setting::user_HOT5 {
 /* Tracking Selectors -- Way and node style BEFORE they are uploaded */
 
 node:modified::modified_layer {
-    symbol-shape: Square;
+    symbol-shape: Circle;
     symbol-size: 10;
-    symbol-stroke-color: #00ff00;
+    symbol-stroke-color: #ff0000;
     symbol-stroke-width: 3px;
     symbol-fill-opacity: 0.5;
     z-index: -5;
@@ -220,7 +190,7 @@ node:modified < way::modified_layer {
     color: transparent;
     opacity: 0;
     casing-width: 2;
-    casing-color: #f1ffff;
+    casing-color: #00ff00;
     casing-opacity: 0.7;
     z-index: -5;
 }
@@ -230,9 +200,6 @@ node:modified < way::modified_layer {
 
 /* User specific styles */
 
-*[eval(JOSM_search("user:VLD026"))][setting("user_Maureen")] {
-  set .Maureen
-}
 *[eval(JOSM_search("user:VLD035"))][setting("user_Kady")] {
   set .Kady
 }
@@ -244,9 +211,6 @@ node:modified < way::modified_layer {
 }
 *[eval(JOSM_search("user:VLD089"))][setting("user_Steve")] {
   set .Steve
-}
-*[eval(JOSM_search("user:VLD090"))][setting("user_Tukui")] {
-  set .Tukui
 }
 *[eval(JOSM_search("user:VLD098"))][setting("user_Drew")] {
   set .Drew
@@ -272,23 +236,11 @@ node:modified < way::modified_layer {
 *[eval(JOSM_search("user:VLD154"))][setting("user_Goose")] {
   set .Goose
 }
-*[eval(JOSM_search("user:VLD150"))][setting("user_Joanna")] {
-  set .Joanna
-}
-*[eval(JOSM_search("user:\"Zainab IRM-ED\""))][setting("user_HOT1")] {
-  set .HOT1;
-}
-*[eval(JOSM_search("user:\"Diah IRM-ED\""))][setting("user_HOT2")] {
-  set .HOT2;
-}
-*[eval(JOSM_search("user:\"Diana IRM-ED\""))][setting("user_HOT3")] {
-  set .HOT3;
-}
-*[eval(JOSM_search("user:\"Anisa IRM-ED\""))][setting("user_HOT4")] {
-  set .HOT4;
-}
 *[eval(JOSM_search("user:\"Qomar IRM-ED\""))][setting("user_HOT5")] {
   set .HOT5;
+}
+*[eval(JOSM_search("user:VLD096"))][setting("user_Kayla")] {
+  set .Kayla
 }
 
 
@@ -304,18 +256,9 @@ node:modified < way::modified_layer {
 /* Styling of ways and nodes once they belong to "history" for each individual user */
 
 
-way.Maureen{
+way.Kady{
   z-index: -10;
-  casing-color: #c9ff7a;
-  casing-width: 2;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.Kady{
-  z-index: -10;
-  casing-color: #ff0000;
+  casing-color: #b400ff;
   casing-width: 8;
   casing-opacity: 0.6;
   /*
@@ -324,7 +267,7 @@ way.Maureen{
   */
 }way.Olympia{
   z-index: -10;
-  casing-color: #fcff9a;
+  casing-color: #b400ff;
   casing-width: 5;
   casing-opacity: 0.6;
   /*
@@ -333,7 +276,7 @@ way.Maureen{
   */
 }way.Gwen{
   z-index: -10;
-  casing-color: #9ee8ff;
+  casing-color: #b400ff;
   casing-width: 2;
   casing-opacity: 0.6;
   /*
@@ -342,17 +285,8 @@ way.Maureen{
   */
 }way.Steve{
   z-index: -10;
-  casing-color: #ff0055;
+  casing-color: #b400ff;
   casing-width: 3;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.Tukui{
-  z-index: -10;
-  casing-color: #6dff00;
-  casing-width: 8;
   casing-opacity: 0.6;
   /*
   text: eval(concat("Highway type =", " ", tag("highway")));
@@ -369,7 +303,7 @@ way.Maureen{
   */
 }way.Jami{
   z-index: -10;
-  casing-color: #ff8000;
+  casing-color: #b400ff;
   casing-width: 5;
   casing-opacity: 0.6;
   /*
@@ -378,7 +312,7 @@ way.Maureen{
   */
 }way.Brenna{
   z-index: -10;
-  casing-color: #0071ff;
+  casing-color: #b400ff;
   casing-width: 3;
   casing-opacity: 0.6;
   /*
@@ -387,7 +321,7 @@ way.Maureen{
   */
 }way.Johnny{
   z-index: -10;
-  casing-color: #bfffe8;
+  casing-color: #b400ff;
   casing-width: 3;
   casing-opacity: 0.6;
   /*
@@ -396,7 +330,7 @@ way.Maureen{
   */
 }way.Ethan{
   z-index: -10;
-  casing-color: #79b4b2;
+  casing-color: #b400ff;
   casing-width: 5;
   casing-opacity: 0.6;
   /*
@@ -405,7 +339,7 @@ way.Maureen{
   */
 }way.Sherry{
   z-index: -10;
-  casing-color: #ffac95;
+  casing-color: #b400ff;
   casing-width: 5;
   casing-opacity: 0.6;
   /*
@@ -414,7 +348,7 @@ way.Maureen{
   */
 }way.Callista{
   z-index: -10;
-  casing-color: #00ac2a;
+  casing-color: #b400ff;
   casing-width: 5;
   casing-opacity: 0.6;
   /*
@@ -423,52 +357,7 @@ way.Maureen{
   */
 }way.Goose{
   z-index: -10;
-  casing-color: #c20018;
-  casing-width: 5;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.Joanna{
-  z-index: -10;
-  casing-color: #ffa0ff;
-  casing-width: 5;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.HOT1{
-  z-index: -10;
-  casing-color: #ff8900;
-  casing-width: 5;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.HOT2{
-  z-index: -10;
-  casing-color: #b3ff00;
-  casing-width: 5;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.HOT3{
-  z-index: -10;
-  casing-color: #0071ff;
-  casing-width: 5;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.HOT4{
-  z-index: -10;
-  casing-color: #9e00ff;
+  casing-color: #b400ff;
   casing-width: 5;
   casing-opacity: 0.6;
   /*
@@ -484,48 +373,43 @@ way.Maureen{
   text: eval(concat("Highway type =", " ", tag("highway")));
   text-offset: -20;
   */
+}way.Kayla{
+  z-index: -10;
+  casing-color: #b400ff;
+  casing-width: 5;
+  casing-opacity: 0.6;
+  /*
+  text: eval(concat("Highway type =", " ", tag("highway")));
+  text-offset: -20;
+  */
 }
 /*NODESTYLE*/
 
-node.Maureen{
-  symbol-size: 25;
-  symbol-shape: Circle;
-  symbol-stroke-color: #ca9cff;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.Kady{
+node.Kady{
   symbol-size: 25;
   symbol-shape: Triangle;
-  symbol-stroke-color: #ffe5f3;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Olympia{
   symbol-size: 20;
   symbol-shape: Triangle;
-  symbol-stroke-color: #00ff5a;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Gwen{
   symbol-size: 25;
-  symbol-shape: Pentagon;
-  symbol-stroke-color: #ff946d;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Steve{
   symbol-size: 20;
-  symbol-shape: Octagon;
-  symbol-stroke-color: #00feff;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.Tukui{
-  symbol-size: 25;
   symbol-shape: Triangle;
-  symbol-stroke-color: #ff737c;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
@@ -538,85 +422,50 @@ node.Maureen{
   z-index: -5;
 }node.Jami{
   symbol-size: 20;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #fcff00;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Brenna{
   symbol-size: 20;
-  symbol-shape: Pentagon;
-  symbol-stroke-color: #7e58ff;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Johnny{
   symbol-size: 20;
-  symbol-shape: Pentagon;
-  symbol-stroke-color: #db7054;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Ethan{
   symbol-size: 10;
-  symbol-shape: Decagon;
-  symbol-stroke-color: #4f9d83;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Sherry{
   symbol-size: 10;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #ff003d;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Callista{
   symbol-size: 10;
-  symbol-shape: Circle;
-  symbol-stroke-color: #0091aa;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Goose{
   symbol-size: 10;
-  symbol-shape: Square;
-  symbol-stroke-color: #ffd300;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.Joanna{
-  symbol-size: 10;
-  symbol-shape: Pentagon;
-  symbol-stroke-color: #ff0087;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.HOT1{
-  symbol-size: 10;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #fdd600;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.HOT2{
-  symbol-size: 10;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #27c300;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.HOT3{
-  symbol-size: 10;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #6163ff;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.HOT4{
-  symbol-size: 10;
-  symbol-shape: Hexagon;
-  symbol-stroke-color: #d05eff;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
@@ -624,6 +473,13 @@ node.Maureen{
   symbol-size: 10;
   symbol-shape: Hexagon;
   symbol-stroke-color: #00ffc0;
+  symbol-stroke-width: 3px;
+  symbol-fill-opacity: 0.5;
+  z-index: -5;
+}node.Kayla{
+  symbol-size: 10;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
