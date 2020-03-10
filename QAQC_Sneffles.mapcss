@@ -118,11 +118,6 @@ setting::user_Steve {
             label:tr("Turn User VLD089 On/Off");
             default:true;
             }
-setting::user_Drew {
-            type:boolean;
-            label:tr("Turn User VLD098 On/Off");
-            default:true;
-            }
 setting::user_Jami {
             type:boolean;
             label:tr("Turn User VLD151 On/Off");
@@ -161,6 +156,11 @@ setting::user_Goose {
 setting::user_Kayla {
             type:boolean;
             label:tr("Turn User VLD096 On/Off");
+            default:true;
+            }
+setting::user_Dylan {
+            type:boolean;
+            label:tr("Turn User VLD032 On/Off");
             default:true;
             }
 
@@ -207,9 +207,6 @@ node:modified < way::modified_layer {
 *[eval(JOSM_search("user:VLD089"))][setting("user_Steve")] {
   set .Steve
 }
-*[eval(JOSM_search("user:VLD098"))][setting("user_Drew")] {
-  set .Drew
-}
 *[eval(JOSM_search("user:VLD151"))][setting("user_Jami")] {
   set .Jami
 }
@@ -233,6 +230,9 @@ node:modified < way::modified_layer {
 }
 *[eval(JOSM_search("user:VLD096"))][setting("user_Kayla")] {
   set .Kayla
+}
+*[eval(JOSM_search("user:VLD032"))][setting("user_Dylan")] {
+  set .Dylan
 }
 
 
@@ -279,15 +279,6 @@ way.Kady{
   z-index: -10;
   casing-color: #b400ff;
   casing-width: 3;
-  casing-opacity: 0.6;
-  /*
-  text: eval(concat("Highway type =", " ", tag("highway")));
-  text-offset: -20;
-  */
-}way.Drew{
-  z-index: -10;
-  casing-color: #B108D6;
-  casing-width: 5;
   casing-opacity: 0.6;
   /*
   text: eval(concat("Highway type =", " ", tag("highway")));
@@ -365,6 +356,15 @@ way.Kady{
   text: eval(concat("Highway type =", " ", tag("highway")));
   text-offset: -20;
   */
+}way.Dylan{
+  z-index: -10;
+  casing-color: #b400ff;
+  casing-width: 5;
+  casing-opacity: 0.6;
+  /*
+  text: eval(concat("Highway type =", " ", tag("highway")));
+  text-offset: -20;
+  */
 }
 /*NODESTYLE*/
 
@@ -393,13 +393,6 @@ node.Kady{
   symbol-size: 20;
   symbol-shape: Triangle;
   symbol-stroke-color: #0d00ff;
-  symbol-stroke-width: 3px;
-  symbol-fill-opacity: 0.5;
-  z-index: -5;
-}node.Drew{
-  symbol-size: 10;
-  symbol-shape: Heptagon;
-  symbol-stroke-color: #0055ff;
   symbol-stroke-width: 3px;
   symbol-fill-opacity: 0.5;
   z-index: -5;
@@ -453,6 +446,13 @@ node.Kady{
   symbol-fill-opacity: 0.5;
   z-index: -5;
 }node.Kayla{
+  symbol-size: 10;
+  symbol-shape: Triangle;
+  symbol-stroke-color: #0d00ff;
+  symbol-stroke-width: 3px;
+  symbol-fill-opacity: 0.5;
+  z-index: -5;
+}node.Dylan{
   symbol-size: 10;
   symbol-shape: Triangle;
   symbol-stroke-color: #0d00ff;
